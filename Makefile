@@ -8,14 +8,15 @@ venv: requirements.txt
 	virtualenv venv
 	venv/bin/pip install -r requirements.txt
 
-nenv: venv
+nenv: | venv
+	rm -rf nenv
 	venv/bin/nodeenv --prebuilt nenv
 	. nenv/bin/activate && npm install -g bower
 
-bower_components: nenv bower.json
+bower_components: bower.json | nenv
 	. nenv/bin/activate && bower install
 
-%.css: %.scss venv bower_components
+%.css: %.scss bower_components | venv
 	venv/bin/sassc $< $@
 
 clean:
