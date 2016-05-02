@@ -1,14 +1,11 @@
 {
-	"name": "Selenium Presentation",
-	"version": "0.0.1",
-	"description": "Selenium Presentation",
-	"authors": [
-		"Ken Struys",
-		"Anthony Sottile"
-	],
-	"dependencies": {
-		"jquery": "1.9",
-		"reveal.js": "2.6.1",
-		"highlightjs": "7.5.0"
-	}
+    "name": "pre-commit Presentation",
+    "version": "0.0.1",
+    "description": "pre-commit Presentation",
+    "authors": ["Anthony Sottile"],
+    "dependencies": {
+        "jquery": "1.9",
+        "reveal.js": "2.6.1",
+        "highlightjs": "7.5.0"
+    }
 }
