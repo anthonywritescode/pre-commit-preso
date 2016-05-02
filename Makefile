@@ -4,20 +4,20 @@ all: scss
 scss: assets/yelp_reveal.css assets/presentation.css
 
 venv: requirements.txt
-	rm -rf venv && virtualenv venv && . venv/bin/activate && pip install -r requirements.txt
+	rm -rf venv
 	virtualenv venv
-	sh -c ". venv/bin/activate && pip install -rrequirements.txt"
+	venv/bin/pip install -r requirements.txt
 
 nenv: venv
-	./venv/bin/nodeenv --prebuilt nenv
-	sh -c '. nenv/bin/activate && npm install -g bower node-sass'
+	venv/bin/nodeenv --prebuilt nenv
+	. nenv/bin/activate && npm install -g bower
 
 bower_components: nenv bower.json
-	sh -c ". nenv/bin/activate && bower install"
+	. nenv/bin/activate && bower install
 
-%.css: %.scss bower_components
-	sh -c ". nenv/bin/activate && node-sass $< -o assets/"
+%.css: %.scss venv bower_components
+	venv/bin/sassc $< $@
 
 clean:
 	rm -rf venv nenv bower_components assets/*.css
-	find . -iname '*.pyc' -delete
+	find -name '*.pyc' -delete
