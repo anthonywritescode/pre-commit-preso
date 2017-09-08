@@ -1,5 +1,6 @@
+repos:
 -   repo: git@github.com:pre-commit/pre-commit-hooks
-    sha: 4078cbedf0360dce2b7cd02cb2812fc50b76b98d
+    sha: v0.9.2
     hooks:
     -   id: trailing-whitespace
     -   id: end-of-file-fixer
@@ -9,10 +10,10 @@
     -   id: check-yaml
     -   id: requirements-txt-fixer
 -   repo: git://github.com/pre-commit/mirrors-jshint
-    sha: e86225836aadd058036f47a6de9b0ee0440476eb
+    sha: v2.9.5
     hooks:
     -   id: jshint
 -   repo: git://github.com/pre-commit/mirrors-scss-lint
-    sha: ce46c548f01433ab1e4587bf993304b52d1b93bc
+    sha: v0.54.0
     hooks:
     -   id: scss-lint
