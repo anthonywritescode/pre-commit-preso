@@ -17,7 +17,7 @@ bower_components: bower.json | nenv
 	. nenv/bin/activate && bower install
 
 %.css: %.scss bower_components | venv
-	venv/bin/sassc $< $@
+	venv/bin/pysassc $< $@
 
 clean:
 	rm -rf venv nenv bower_components assets/*.css
