@@ -10,10 +10,10 @@ repos:
     -   id: check-yaml
     -   id: requirements-txt-fixer
 -   repo: https://github.com/pre-commit/mirrors-jshint
-    rev: v2.9.6
+    rev: v2.9.7
     hooks:
     -   id: jshint
 -   repo: https://github.com/pre-commit/mirrors-scss-lint
-    rev: v0.57.1
+    rev: v0.57.1-1
     hooks:
     -   id: scss-lint
