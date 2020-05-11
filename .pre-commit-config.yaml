@@ -1,6 +1,6 @@
 repos:
 -   repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.1.0
+    rev: v2.5.0
     hooks:
     -   id: trailing-whitespace
     -   id: end-of-file-fixer
@@ -10,10 +10,10 @@ repos:
     -   id: check-yaml
     -   id: requirements-txt-fixer
 -   repo: https://github.com/pre-commit/mirrors-jshint
-    rev: v2.9.7
+    rev: v2.11.0
     hooks:
     -   id: jshint
 -   repo: https://github.com/pre-commit/mirrors-scss-lint
-    rev: v0.57.1-1
+    rev: v0.59.0
     hooks:
     -   id: scss-lint
